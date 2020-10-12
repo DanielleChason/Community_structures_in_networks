@@ -2,13 +2,14 @@
 
 This project takes a complex network, recieved as a graph, and divides it into ***clusters*** using the 'division' algorithm, based on the [Newman, M. E. J. (2006). Modularity and community structure in networks](https://www.pnas.org/content/103/23/8577/tab-article-info) article. 
 
-# project assumetions:
+### project assumetions:
 - the input is an indirect graph
 - the adjacency matrix of the graph is a ***sparse matrix***, which means the edges numbers are O(n). A required assumption, as without it the running time will be significantly **slower for larger n values**.
 - Input file as described below.
 - A postive number is a number greater than 0.00001.
+- The project recieves 2 arguments, first the name of the input file, and second, the name of the output file.
 
-## Files Format 
+### Files Format 
 The input and output files are both binary files consisting only of integers (each vertex has a 'name' represented with indices, for n vertexes the names are 0,1,...,n-1).
 
 ### Input file
