@@ -27,8 +27,7 @@ The next value is the number of nodes in the second group, followed by the indic
 nodes in group, then the number of nodes and indices of nodes in the third group, and so
 on until the last group.
 
-# Parameters
-**"The Algorithms"** section below describe the algorithms and their pseudo-code that were used. It will use the following parameter:
+## Parameters
 
 **A** = the adjacency matrix.
 
@@ -38,7 +37,7 @@ on until the last group.
 
 **M** = <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^n{k[i]}">
 
-**g** = a group of vertexes, for example {0,5,9}.
+**g** = a group of vertexes, for example {1,2,7}.
 
 **B** = a matrix, <img src="https://render.githubusercontent.com/render/math?math=B_{ij}={A_{ij}-\frac{k_ik_j}{M}}">
 
@@ -56,7 +55,7 @@ on until the last group.
 
 **Delta_Q** =  <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{2}s^T\hat{B[g]}s">
 
-for the mathematic explanation for this formulas, you may read the article.
+for the mathematcal explanation for these formulas, you may read the article previously linked.
 
 # The Algorithms
 
