@@ -1,28 +1,30 @@
 # Community_structures_in_networks
 
-This project take a graph as an input and and divide it to **clusters** according to the edges density. 
+This project takes a complex network, recieved as a graph, and divides it into ***clusters*** using the 'division' algorithm, based on the [Newman, M. E. J. (2006). Modularity and community structure in networks](https://www.pnas.org/content/103/23/8577/tab-article-info) article. 
 
-project assume:
+# project assumetions:
 - the input is an indirect graph
-- the adjacency matrix of the graph is a ***sparse matrix***, that's mean the edges number are O(n). If this assumption does not exist, the running time will be significantly **slower for large n** .
-- Input file as describe below.
-- two start arguments- "input file path" "output file path"
-- a number is positive if it is bigger than 0.00001
+- the adjacency matrix of the graph is a ***sparse matrix***, which means the edges numbers are O(n). A required assumption, as without it the running time will be significantly **slower for larger n values**.
+- Input file as described below.
+- A postive number is a number greater than 0.00001.
 
-The division base on [Newman, M. E. J. (2006). Modularity and community structure in networks](https://www.pnas.org/content/103/23/8577/tab-article-info) article. 
-
-## Files Format
+## Files Format 
 The input and output files are both binary files consisting only of integers (each vertex has a 'name' represented with indices, for n vertexes the names are 0,1,...,n-1).
 
 ### Input file
-The **first value** represents the number of nodes in the network.
-The **second value** represents the number of edges of the first node, i.e., k1. It is followed by the k1 indices of its neighbors, in increasing order.
-The **next value** is k2, followed by the k2 indices of the neighbors of the second node, then k3 and its k3 neighbors, and so on until node n-1.
+The first value represents the number of nodes in the network, n = |V |.
+The second value represents the number of edges of the first node, i.e., k1. It is followed by
+the k1 indices of its neighbors, in increasing order.
+The next value is k2, followed by the k2 indices of the neighbors of the second node, then k3
+and its k3 neighbors, and so on until node n.
 
 ### Output file
-The **first value** represents the number of groups in the division.
-The **second value** represents the number of nodes in the first group, followed by the indices of the nodes in the group, in increasing order.
-The **next value** is the number of nodes in the second group, followed by the indices of the nodes in the group, in increasing order, and so on until the last group.
+The first value represents the number of groups in the division.
+The second value represents the number of nodes in the first group, followed by the indices
+of the nodes in the group, in increasing order.
+The next value is the number of nodes in the second group, followed by the indices of the
+nodes in group, then the number of nodes and indices of nodes in the third group, and so
+on until the last group.
 
 # Parameters
 **"The Algorithms"** section below describe the algorithms and their pseudo-code that were used. It will use the following parameter:
